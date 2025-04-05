@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #f8f8f8;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signin-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .signin-btn:hover {
+            background-color: #45a049;
+        }
+
+        .option-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .option-btn:hover {
+            background-color: #1976D2;
+        }
+
+        .progress-bar-container {
+            background-color: #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+            height: 20px;
+            width: 100%;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 50%; /* Change this dynamically based on progress */
+            border-radius: 8px;
+        }
+
+        .map-container {
+            margin-top: 20px;
+        }
+
+        .map-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Outpost App</h1>
+        <button class="signin-btn" onclick="signIn()">Sign In</button>
+        <button class="option-btn" onclick="viewLeaderboard()">View Leaderboard</button>
+        <button class="option-btn" onclick="viewPastTasks()">View Past Tasks</button>
+
+        <!-- Task In Progress Section -->
+        <div class="task-in-progress">
+            <h2>Task in Progress: Design Homepage</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div> <!-- Progress Bar -->
+            </div>
+            <p>50% Completed</p>
+        </div>
+
+        <!-- Map Image with Red Pinpoints -->
+        <div class="map-container">
+            <h2>Outpost Locations</h2>
+            <img src="https://via.placeholder.com/600x400.png?text=Map+With+Red+Markers" alt="Outpost Locations Map" class="map-image">
+        </div>
+    </div>
+
+    <script>
+        function signIn() {
+            alert("Redirecting to sign-in page...");
+            // window.location.href = "signin.html"; // Uncomment if you have a sign-in page
+        }
+
+        function viewLeaderboard() {
+            alert("Loading leaderboard...");
+            window.location.href = "leaderboard.html"; // Uncomment if you have a leaderboard page
+        }
+
+        function viewPastTasks() {
+            alert("Fetching past tasks...");
+            window.location.href = "tasks.html"; // Uncomment if you have a past tasks page
+        }
+    </script>
+</body>
+</html>

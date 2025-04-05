@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #f8f8f8;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .task {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .progress-bar-container {
+            background-color: #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+            height: 20px;
+            width: 100%;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 50%; /* You can dynamically change this value */
+            border-radius: 8px;
+        }
+
+        .dropdown-container {
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .dropdown-header {
+            cursor: pointer;
+            color: #2196F3;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .roadmap {
+            list-style: none;
+            padding: 0;
+        }
+
+        .roadmap-item {
+            padding: 8px 12px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .roadmap-item.completed {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .roadmap-item.pending {
+            background-color: #FF9800;
+            color: white;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-past-tasks-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .view-past-tasks-btn:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task In Progress</h1>
+        
+        <!-- Current Task in Progress -->
+        <div class="task">
+            <h2>Task: Design Homepage</h2>
+            <p>Task is currently in progress. Keep up the good work!</p>
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div> <!-- Progress Bar -->
+            </div>
+            <p>50% Completed</p>
+        </div>
+
+        <!-- Button to Show Past Tasks -->
+        <button class="view-past-tasks-btn" onclick="toggleDropdown()">View Past Tasks</button>
+
+        <!-- Dropdown for Past Tasks -->
+        <div class="dropdown-container" id="past-tasks-dropdown">
+            <div class="dropdown-header">Task Journey (Roadmap)</div>
+            <ul class="roadmap">
+                <li class="roadmap-item completed">
+                    <span>Task 1: Brainstorm Ideas</span>
+                    <span>Completed</span>
+                </li>
+                <li class="roadmap-item completed">
+                    <span>Task 2: Wireframe Design</span>
+                    <span>Completed</span>
+                </li>
+                <li class="roadmap-item completed">
+                    <span>Task 3: Create Layout</span>
+                    <span>Completed</span>
+                </li>
+                <li class="roadmap-item pending">
+                    <span>Task 4: Implement Front-End</span>
+                    <span>In Progress</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle dropdown visibility for past tasks
+        function toggleDropdown() {
+            var dropdown = document.getElementById('past-tasks-dropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    </script
+</body>
+</html>
